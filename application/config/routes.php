@@ -56,14 +56,13 @@ $route['translate_uri_dashes'] = FALSE;
 
 //pages is the class, view is the method and 1 is the parameter
 
-$route['default_controller'] = 'pages/view';
-$route['(:any)'] = 'pages/view/$1';
 */
+
+$route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
-
 
 
 
