@@ -1,5 +1,6 @@
 <?php
-//$this->load->view('themes/bootswatch/header');
+//views/news/index.php
+
 $this->load->view($this->config->item('theme') . 'header');
 ?>
 
@@ -11,11 +12,17 @@ $this->load->view($this->config->item('theme') . 'header');
         <div class="main">
                 <?php echo $news_item['text'] ?>
         </div>
-        <p><a href="<?php echo $news_item['slug'] ?>">View article</a></p>
 
+ <p>     
+<?php   // news is the controller, slug is the record passing back and forth
+        echo anchor('news/' . $news_item['slug'], 'View Article'); //must have url helper loaded to use this
+?>
+ </p>
+ 
+ 
 <?php endforeach ?>
 
 <?php
-//$this->load->view('themes/bootswatch/footer');
+
 $this->load->view($this->config->item('theme') . 'footer');
 ?>
