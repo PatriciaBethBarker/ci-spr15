@@ -9,12 +9,12 @@ class Rss extends CI_Controller {
                 $this->config->set_item('banner', 'Global News Banner');
         }
  
-        public function index()
+        public function index(){
 
-                $request = "http://rss.news.yahoo.com/rss/software";  //model
-                $response = file_get_contents($request);  //model
-                $dta[xml] = simplexml_load_string($response);  //model
-                
+             //   $request = "http://rss.news.yahoo.com/rss/software";  //this code is already in the model-remove it here
+             //   $response = file_get_contents($request);  //model
+                $data['xml'] = $this->rss_model->get_rss();
+
                 $data['title'] = 'RSS Feed';
                 $this->load->view('rss/index', $data);
  
