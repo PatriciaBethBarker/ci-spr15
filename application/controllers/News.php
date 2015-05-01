@@ -9,7 +9,7 @@ class News extends CI_Controller {
                 $this->config->set_item('banner','Global News Banner');
         }#end constructor
 
-        public function index()
+        public function index(1$slug=NULL)  //take data through index, pass thru model create switch statement
         {
                 $data['news'] = $this->news_model->get_news();
                 $data['title'] = 'News archive';

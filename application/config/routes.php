@@ -57,10 +57,13 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 */
 
-$route['rss'] = 'rss';
 $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
+$route['rss/(:any)'] = 'rss/$1';
+$route['rss'] = 'rss';
+$route['customer'] = 'customer';
+$route['customers'] = 'customers';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
 
