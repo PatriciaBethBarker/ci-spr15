@@ -7,29 +7,30 @@
 * views/customer/index.php
 *
 * @package ITC 260 CodeIgnitor
-* @subpackage CONTROLLER
+* @subpackage Customer
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
-* @version 1.0 2015/04/30
-* @link http://www.tcbcommercialproperties.com/sandbox/index.html
+* @version 1.0 2015/05/19
+* @link http://www.tcbcommercialproperties.com/sandbox/ ??
 * @license http://www.apache.org/licenses/LICENSE-2.0
-* @see Customer_model.php.php
-* @see customer.php
-* @todo none
+* @see contollers/Customer.php
+* @see models/Customer_model.php
+* @see customer.php ??
+* @todo line 13 and 17
 */
 
-$this->load->view($this->config->item('theme').'header');
+	$this->load->view($this->config->item('theme').'header');
 ?>
 
-<h2><?php echo $title ?></h2>
-<?php foreach ($query->result() as $customer): ?>
+<h2><?= $title; ?></h2>
+
+<?php 	foreach($query->result() as $customer): ?>
+
+<?php 	echo $customer->FirstName . "<br/>"; ?>
+
+<?php 	endforeach ?>
 
 <?php
-	echo $customer->FirstName . "<br/>";
-?>
-<?php endforeach ?>
-
-<?php
-$this->load->view($this->config->item('theme').'footer');
+	$this->load->view($this->config->item('theme').'footer');
 ?>
 
 

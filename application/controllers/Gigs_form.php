@@ -44,7 +44,7 @@ class Gigs_form extends CI_Controller
         public function index()
         {//begin function index
               
-              $this->load->view('gigs_form/index');  
+                $this->load->view('gigs_form/index');  
         }//end function index
         
 }//end controller
