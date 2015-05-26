@@ -1,5 +1,5 @@
 <?php
-// News.php controller
+// controller/News.php 
 class News extends CI_Controller {
 
         public function __construct()
@@ -9,10 +9,10 @@ class News extends CI_Controller {
                 $this->config->set_item('banner','Global News Banner');
         }#end constructor
 
-        public function index($slug = NULL)  //take data through index, pass thru model create switch statement
+        public function index()  //take data through index, pass thru model create switch statement
         {
                 $data['news'] = $this->news_model->get_news();
-                $data['title'] = 'News archive';
+                $data['title'] = 'News Title';
                 $this->load->view('news/index', $data);
                 
         }#end index
