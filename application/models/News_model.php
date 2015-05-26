@@ -1,4 +1,5 @@
 <?php
+//models/News_model.php
 class News_model extends CI_Model {
 
         public function __construct()
