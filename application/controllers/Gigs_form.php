@@ -19,7 +19,7 @@
  * Gigs_form controller
  *
  *
- * @see Gigs_model.php
+ * @see Gigs_form_model.php
  * @todo none
  */
 class Gigs_form extends CI_Controller
@@ -37,14 +37,20 @@ class Gigs_form extends CI_Controller
         {//begin constructor
         
                 parent::__construct();
+                
+                $this->load->model('gigs_form_model');
+                
                 $this->config->set_item('banner', 'Global News Banner');
         
-        }//end constructor       
+        }#end constructor       
         
         public function index()
         {//begin function index
+                $data['query'] = $this->gigs_form_model->get_gigs_form();//check this
+                
+                $data['title']= 'Gigs';
               
-                $this->load->view('gigs_form/index');  
-        }//end function index
+                $this->load->view('gigs_form/index', data);  
+        }#end function index
         
-}//end controller
+}#end Gigs class/controller
