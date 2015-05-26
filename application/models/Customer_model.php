@@ -1,14 +1,15 @@
 <?php
+//models/Customer_model.php
 /**
 * Customer_model.php   model for a generic Customer
 *
 * Used to show how to do CRUD in CodeIgnitor
 *
 * @package ITC 260 CodeIgnitor
-* @subpackage CONTROLLER
+* @subpackage Customer
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
 * @version 1.0 2015/05/05
-* @link http://www.tcbcommercialproperties.com/sandbox/index.html
+* @link http://www.tcbcommercialproperties.com/sandbox/ci
 * @license http://www.apache.org/licenses/LICENSE-2.0
 * @see Customer.php
 * @see index.php
@@ -18,7 +19,7 @@
 /**
  * Customer model for our CRUD demo
  *
- * @see Customer
+ * @see controllers/Customer.php
  * @todo none
  */
 class Customer_model extends CI_Model {
@@ -37,8 +38,8 @@ class Customer_model extends CI_Model {
        
        public function get_customers()
        {
-        //return "Hello from the Customer model!";
-        return $this->db->get('test_customers');
+        return 'Hello from the Customer model!';
+        return $this->db->get('test_Customers');
        }#end get_customers()
        
         /* public function get_news($slug = FALSE)
