@@ -66,5 +66,5 @@ $route['feed'] = 'feed';
 $route['customer'] = 'customer';
 $route['customers'] = 'customers';
 $route['(:any)'] = 'pages/view/$1';
-//$route['default_controller'] = 'pages/view';
-$route['default_controller'] = 'customer';
+$route['default_controller'] = 'pages/view';
+//$route['default_controller'] = 'customer';
