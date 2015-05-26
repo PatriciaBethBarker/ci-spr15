@@ -1,27 +1,28 @@
 <?php
 /**
-* Customer_model.php   model for a generic Customer
+* Gigs_form_model.php   model for a generic Customer
 *
 * Used to show how to do CRUD in CodeIgnitor
 *
-* @package ITC 260 CodeIgnitor
+* @package ITC 260 CodeIgnitor - Gig Central
 * @subpackage CONTROLLER
 * @author Patricia Barker <pbarke01@seattlecentral.edu>
-* @version 1.0 2015/05/05
-* @link http://www.tcbcommercialproperties.com/sandbox/index.html
+* @version 1.0 2015/05/26
+* @link http://www.tcbcommercialproperties.com/sandbox/ci/ ??
 * @license http://www.apache.org/licenses/LICENSE-2.0
-* @see Customer.php
+* @see controllers/Gigs_form.php
+* @see views/gigs_form/index.php
 * @see index.php
-* @todo none
+* @todo none  ??
 */
 
 /**
- * Customer model for our CRUD demo
+ * Gigs_form model for our Gig Central Project
  *
- * @see Customer
+ * @see Gigs_form
  * @todo none
  */
-class Customer_model extends CI_Model {
+class Gigs_form_model extends CI_Model {
         
          /**
          * Loads default data into Object
@@ -35,47 +36,11 @@ class Customer_model extends CI_Model {
                 $this->load->database();
         }#end constructor
        
-       public function get_customers()
+       public function get_gigs_form()
        {
-        //return "Hello from the Customer model!";
-        return $this->db->get('test_customers');
-       }#end get_customers()
+        //return "Hello from the Gigs_form model!";
+        return $this->db->get('test_gigs_form');
+       }#end get_gigs_form()
        
-        /* public function get_news($slug = FALSE)
-        *{
-        *     if ($slug === FALSE)
-        *      {
-        *        $query = $this->db->get('news');
-        *       return $query->result_array();
-        *   }
-        *
-        *        $query = $this->db->get_where('news', array('slug' => $slug));
-        *        return $query->row_array();
-        *     }#end get news
-        */
-       
-        /* public function set_news()
-        *{
-        *    $this->load->helper('url');
-        *
-        *    $slug = url_title($this->input->post('title'), 'dash', TRUE);
-        *
-        *    $data = array(
-        *        'title' => $this->input->post('title'),
-        *        'slug' => $slug,
-        *        'text' => $this->input->post('text')
-        *    );
-        *
-        *    return $this->db->insert('news', $data);
-        *}
-        */
-        
-        /*
-        * public function get_rss($request)
-        *{
-        *   $request= 'http://rss.news.yahoo.com/rss/software';
-        *    $response = file_get_contents($request);
-        *    return simplexml_load_string($response);
-        }*/
-}
-#end of the Customer_model
+
+}#end of the Gigs_form_model
