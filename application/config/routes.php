@@ -60,13 +60,20 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['rss'] = 'rss';
 $route['rss/(:any)'] = 'rss/$1';
+$route['feed'] = 'feed';
+
 $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
-$route['gigs_form'] = 'gigs_form';
 $route['news'] = 'news';
-$route['feed'] = 'feed';
+
+$route['gigs_form'] = 'gigs_form';
+
 $route['customer'] = 'customer';
-$route['customers'] = 'customers';
+$route['customers'] = 'customer';
+
 $route['(:any)'] = 'pages/view/$1';
-$route['default_controller'] = 'pages/view';
-//$route['default_controller'] = 'customer';
+//$route['default_controller'] = 'pages/view';
+
+//bootswatch example route
+$route['example'] = 'customer/example';
+$route['default_controller'] = 'customer';
