@@ -39,7 +39,7 @@ class Gigs_form_model extends CI_Model {
        public function get_gigs_form()
        {
         //return "Hello from the Gigs_form model!";
-        return $this->db->get('test_gigs_form');
+        return $this->db->get('test_customers'); //check this
        }#end get_gigs_form()
        
 
